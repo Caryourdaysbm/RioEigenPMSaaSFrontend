@@ -10,6 +10,7 @@ export default function Register() {
   const [err, setErr] = useState(null)
   const nav = useNavigate()
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault()
     setErr(null)
@@ -22,28 +23,32 @@ export default function Register() {
   }
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <form className="bg-white p-8 rounded shadow-md w-full max-w-md" onSubmit={handleSubmit}>
-        <h2 className="text-2xl mb-4">Register Organization</h2>
-        {err && <div className="text-red-600 mb-2">{err}</div>}
-        <label className="block mb-2">Organization Name
-          <input className="w-full border p-2 rounded" value={orgName} onChange={e => setOrgName(e.target.value)} />
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-50 to-blue-100">
+      <form className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md" onSubmit={handleSubmit}>
+        <h2 className="text-3xl font-bold mb-6 text-purple-700 text-center">Register Organization</h2>
+        {err && <div className="text-red-600 mb-4 text-center">{err}</div>}
+        <label className="block mb-4">
+          <span className="text-gray-700">Organization Name</span>
+          <input className="w-full border p-2 rounded mt-1" value={orgName} onChange={e => setOrgName(e.target.value)} />
         </label>
-        <label className="block mb-2">Admin Name
-          <input className="w-full border p-2 rounded" value={adminName} onChange={e => setAdminName(e.target.value)} />
+        <label className="block mb-4">
+          <span className="text-gray-700">Admin Name</span>
+          <input className="w-full border p-2 rounded mt-1" value={adminName} onChange={e => setAdminName(e.target.value)} />
         </label>
-        <label className="block mb-2">Email
-          <input className="w-full border p-2 rounded" value={email} onChange={e => setEmail(e.target.value)} />
+        <label className="block mb-4">
+          <span className="text-gray-700">Email</span>
+          <input className="w-full border p-2 rounded mt-1" value={email} onChange={e => setEmail(e.target.value)} />
         </label>
-        <label className="block mb-4">Password
-          <input type="password" className="w-full border p-2 rounded" value={password} onChange={e => setPassword(e.target.value)} />
+        <label className="block mb-6">
+          <span className="text-gray-700">Password</span>
+          <input type="password" className="w-full border p-2 rounded mt-1" value={password} onChange={e => setPassword(e.target.value)} />
         </label>
-        <button className="w-full bg-blue-600 text-white p-2 rounded mb-2">
+        <button className="w-full bg-purple-600 hover:bg-purple-700 text-white p-2 rounded mb-4 transition">
           Register
         </button>
         <Link
           to="/login"
-          className="w-full block text-blue-600 underline mb-2 text-center"
+          className="w-full block text-purple-600 underline mb-4 text-center hover:text-purple-800 transition"
         >
           Already have an account? Sign in
         </Link>

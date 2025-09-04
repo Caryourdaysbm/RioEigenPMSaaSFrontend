@@ -5,6 +5,7 @@ Quick scaffold that connects to the FastAPI backend. rename the `.env.example` f
 first do 
 - npm i
 - npm i @vitejs/plugin-react
+- npm install -D @tailwindcss/postcss
 
 Scripts:
 - npm run dev
