@@ -7,6 +7,16 @@ first do
 - npm i @vitejs/plugin-react
 - npm install -D @tailwindcss/postcss
 
+postcss.config.js content should be:
+    ```
+     module.exports = {
+       plugins: {
+         '@tailwindcss/postcss': {},
+         autoprefixer: {},
+       },
+     }
+
+
 Scripts:
 - npm run dev
 - npm run build
