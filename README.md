@@ -1,11 +1,15 @@
 # PM SaaS Frontend (Vite + React + Tailwind)
 
-Quick scaffold that connects to the FastAPI backend. Set VITE_API_URL in a .env file if needed.
+Quick scaffold that connects to the FastAPI backend. rename the `.env.example` file to `.env`.
+
+first do 
+- npm i
+- npm i @vitejs/plugin-react
 
 Scripts:
 - npm run dev
 - npm run build
-- npm run preview
+
 
 Notes:
 - This scaffold keeps auth in localStorage and uses the backend endpoints created in the FastAPI scaffold.
